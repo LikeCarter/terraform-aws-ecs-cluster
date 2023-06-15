@@ -40,7 +40,7 @@ module "ecs_labels" {
 module "autoscale_group" {
   for_each = local.ec2_capacity_providers
 
-  source  = "https://github.com/LikeCarter/terraform-aws-ec2-autoscale-group"
+  source  = "github.com/LikeCarter/terraform-aws-ec2-autoscale-group"
 
   context = module.ecs_labels[each.key].context
 
